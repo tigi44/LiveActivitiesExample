@@ -19,23 +19,77 @@ struct OrderCoffee: Widget {
         } dynamicIsland: { context in
             DynamicIsland {
                 DynamicIslandExpandedRegion(.leading) {
-                    Text("")
+                    HStack(spacing: -8) {
+                        ForEach(context.attributes.orderItems, id: \.self) { item in
+                            Image(systemName: item)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 30, height: 30)
+                        }
+                    }
+                    .foregroundColor(.red)
                 }
                 DynamicIslandExpandedRegion(.trailing) {
-                    Text("")
+                    Text("#\(context.attributes.orderNumber)")
+                        .foregroundColor(.white)
                 }
                 DynamicIslandExpandedRegion(.center) {
-                    Text("")
+                    VStack {
+                        Text(context.state.status.title)
+                            .font(.title)
+                        
+                        Text("\(context.state.status.subTitle)")
+                            .font(.caption2)
+                            .foregroundColor(.white.opacity(0.4))
+                    }
                 }
                 DynamicIslandExpandedRegion(.bottom) {
-                    Text("")
+                    ZStack(alignment: .center) {
+                        Rectangle()
+                            .fill(
+                                LinearGradient(
+                                        gradient: Gradient(stops: [
+                                            Gradient.Stop(color: context.state.status == .received ? .white.opacity(0.6) : .red, location: 0.5),
+                                            Gradient.Stop(color: context.state.status == .ready ? .red : .white.opacity(0.6), location: 0.5)
+                                        ]),
+                                        startPoint: .leading,
+                                        endPoint: .trailing)
+                            )
+                            .frame(height: 2)
+                            .padding(.horizontal, 60)
+                        
+                        HStack(alignment: .center, spacing: 0) {
+                            ForEach(OrderStatus.allCases, id: \.self) { status in
+                                Image(systemName: status.image)
+                                    .font(context.state.status == status ? .title2 : .body)
+                                    .foregroundColor(context.state.status == status ? .red : Color.init(red: 0.6, green: 0.6, blue: 0.6))
+                                    .frame(width: context.state.status == status ? 45 : 32, height: context.state.status == status ? 45 : 32)
+                                    .background {
+                                        Circle()
+                                            .fill(context.state.status == status ? .white : Color.init(red: 0.4, green: 0, blue: 0))
+                                    }
+
+                                    .frame(maxWidth: .infinity)
+                            }
+                        }
+                    }
                 }
             } compactLeading: {
-                Text("")
+                HStack(spacing: -8) {
+                    ForEach(context.attributes.orderItems, id: \.self) { item in
+                        Image(systemName: item)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 30, height: 30)
+                    }
+                }
+                .foregroundColor(.red)
             } compactTrailing: {
-                Text("")
+                Image(systemName: context.state.status.image)
+                    .font(.title3)
             } minimal: {
-                Text("")
+                Image(systemName: context.state.status.image)
+                    .font(.title3)
             }
         }
     }
@@ -78,6 +132,7 @@ struct LockScreenLiveActivityView: View {
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: 30, height: 30)
+                                    .foregroundColor(.red)
                             }
                             .frame(width: 40, height: 40)
                         }
