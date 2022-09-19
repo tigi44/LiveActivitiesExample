@@ -9,39 +9,39 @@ import Foundation
 import ActivityKit
 
 public enum OrderStatus: CaseIterable, Codable, Equatable {
-    case ordered
+    case received
     case progress
-    case complete
+    case ready
     
     var image: String {
         switch self {
-        case .ordered:
+        case .received:
             return "basket.fill"
         case .progress:
             return "stove.fill"
-        case .complete:
+        case .ready:
             return "takeoutbag.and.cup.and.straw.fill"
         }
     }
     
     var title: String {
         switch self {
-        case .ordered:
+        case .received:
             return "Order received"
         case .progress:
             return "Order in progress"
-        case .complete:
-            return "Order complete"
+        case .ready:
+            return "Ready"
         }
     }
     
     var subTitle: String {
         switch self {
-        case .ordered:
+        case .received:
             return "Your order has been received."
         case .progress:
             return "Your order is in progress."
-        case .complete:
+        case .ready:
             return "Your order is ready, please pick it up."
         }
     }
@@ -50,7 +50,7 @@ public enum OrderStatus: CaseIterable, Codable, Equatable {
 
 struct OrderAttributes: ActivityAttributes {
     struct ContentState: Codable, Hashable {
-        var status: OrderStatus = .ordered
+        var status: OrderStatus = .received
     }
     
     var orderNumber: Int

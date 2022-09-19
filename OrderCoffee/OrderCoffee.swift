@@ -89,8 +89,8 @@ struct LockScreenLiveActivityView: View {
                         .fill(
                             LinearGradient(
                                     gradient: Gradient(stops: [
-                                        Gradient.Stop(color: context.state.status == .ordered ? .white.opacity(0.6) : .red, location: 0.5),
-                                        Gradient.Stop(color: context.state.status == .complete ? .red : .white.opacity(0.6), location: 0.5)
+                                        Gradient.Stop(color: context.state.status == .received ? .white.opacity(0.6) : .red, location: 0.5),
+                                        Gradient.Stop(color: context.state.status == .ready ? .red : .white.opacity(0.6), location: 0.5)
                                     ]),
                                     startPoint: .leading,
                                     endPoint: .trailing)

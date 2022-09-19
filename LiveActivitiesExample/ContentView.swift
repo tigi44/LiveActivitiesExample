@@ -11,7 +11,7 @@ import ActivityKit
 struct ContentView: View {
     
     @State var currentActivityID: String = ""
-    @State var currentActivityStatus: OrderStatus = .ordered
+    @State var currentActivityStatus: OrderStatus = .received
     @State var activityIDs: [String] = []
     
     var body: some View {
@@ -42,14 +42,14 @@ struct ContentView: View {
                     
                     Section("Change status") {
                         Picker(selection: $currentActivityStatus) {
-                            Text("Ordered")
-                                .tag(OrderStatus.ordered)
+                            Text("Received")
+                                .tag(OrderStatus.received)
                             
                             Text("Progress")
                                 .tag(OrderStatus.progress)
                             
-                            Text("Complete")
-                                .tag(OrderStatus.complete)
+                            Text("Ready")
+                                .tag(OrderStatus.ready)
                         } label: {
                         }
                         .pickerStyle(.segmented)
@@ -67,7 +67,7 @@ struct ContentView: View {
                             self.activityIDs.removeAll(where: { $0 == currentActivityID})
                             currentActivityID = activityIDs.first ?? ""
                             if currentActivityID.count <= 0 {
-                                currentActivityStatus = .ordered
+                                currentActivityStatus = .received
                             }
                         }
                     }
