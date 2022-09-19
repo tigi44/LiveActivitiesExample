@@ -11,7 +11,40 @@
 		0E75858328D46D2200D3C6C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E75858228D46D2200D3C6C6 /* ContentView.swift */; };
 		0E75858528D46D2300D3C6C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E75858428D46D2300D3C6C6 /* Assets.xcassets */; };
 		0E75858828D46D2300D3C6C6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E75858728D46D2300D3C6C6 /* Preview Assets.xcassets */; };
+		0E75859528D46D4C00D3C6C6 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E75859428D46D4C00D3C6C6 /* WidgetKit.framework */; };
+		0E75859728D46D4C00D3C6C6 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E75859628D46D4C00D3C6C6 /* SwiftUI.framework */; };
+		0E75859A28D46D4C00D3C6C6 /* OrderCoffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E75859928D46D4C00D3C6C6 /* OrderCoffee.swift */; };
+		0E75859D28D46D4F00D3C6C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E75859C28D46D4F00D3C6C6 /* Assets.xcassets */; };
+		0E75859F28D46D4F00D3C6C6 /* OrderCoffee.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 0E75859B28D46D4E00D3C6C6 /* OrderCoffee.intentdefinition */; };
+		0E7585A028D46D4F00D3C6C6 /* OrderCoffee.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 0E75859B28D46D4E00D3C6C6 /* OrderCoffee.intentdefinition */; };
+		0E7585A328D46D4F00D3C6C6 /* OrderCoffeeExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0E75859228D46D4C00D3C6C6 /* OrderCoffeeExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0E7585B428D4829C00D3C6C6 /* OrderActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7585B028D480AB00D3C6C6 /* OrderActivityManager.swift */; };
+		0E7585B528D482A000D3C6C6 /* OrderActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7585B028D480AB00D3C6C6 /* OrderActivityManager.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0E7585A128D46D4F00D3C6C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E75857528D46D2200D3C6C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E75859128D46D4C00D3C6C6;
+			remoteInfo = OrderCoffeeExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0E7585A728D46D4F00D3C6C6 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0E7585A328D46D4F00D3C6C6 /* OrderCoffeeExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0E75857D28D46D2200D3C6C6 /* LiveActivitiesExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveActivitiesExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,6 +52,15 @@
 		0E75858228D46D2200D3C6C6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0E75858428D46D2300D3C6C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E75858728D46D2300D3C6C6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0E75859228D46D4C00D3C6C6 /* OrderCoffeeExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OrderCoffeeExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E75859428D46D4C00D3C6C6 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		0E75859628D46D4C00D3C6C6 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		0E75859928D46D4C00D3C6C6 /* OrderCoffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCoffee.swift; sourceTree = "<group>"; };
+		0E75859B28D46D4E00D3C6C6 /* OrderCoffee.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = OrderCoffee.intentdefinition; sourceTree = "<group>"; };
+		0E75859C28D46D4F00D3C6C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0E75859E28D46D4F00D3C6C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E7585AF28D4728400D3C6C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0E7585B028D480AB00D3C6C6 /* OrderActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderActivityManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +71,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0E75858F28D46D4C00D3C6C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E75859728D46D4C00D3C6C6 /* SwiftUI.framework in Frameworks */,
+				0E75859528D46D4C00D3C6C6 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -36,6 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				0E75857F28D46D2200D3C6C6 /* LiveActivitiesExample */,
+				0E75859828D46D4C00D3C6C6 /* OrderCoffee */,
+				0E75859328D46D4C00D3C6C6 /* Frameworks */,
 				0E75857E28D46D2200D3C6C6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				0E75857D28D46D2200D3C6C6 /* LiveActivitiesExample.app */,
+				0E75859228D46D4C00D3C6C6 /* OrderCoffeeExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,6 +105,7 @@
 		0E75857F28D46D2200D3C6C6 /* LiveActivitiesExample */ = {
 			isa = PBXGroup;
 			children = (
+				0E7585AF28D4728400D3C6C6 /* Info.plist */,
 				0E75858028D46D2200D3C6C6 /* LiveActivitiesExampleApp.swift */,
 				0E75858228D46D2200D3C6C6 /* ContentView.swift */,
 				0E75858428D46D2300D3C6C6 /* Assets.xcassets */,
@@ -67,6 +122,27 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		0E75859328D46D4C00D3C6C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0E75859428D46D4C00D3C6C6 /* WidgetKit.framework */,
+				0E75859628D46D4C00D3C6C6 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0E75859828D46D4C00D3C6C6 /* OrderCoffee */ = {
+			isa = PBXGroup;
+			children = (
+				0E7585B028D480AB00D3C6C6 /* OrderActivityManager.swift */,
+				0E75859928D46D4C00D3C6C6 /* OrderCoffee.swift */,
+				0E75859B28D46D4E00D3C6C6 /* OrderCoffee.intentdefinition */,
+				0E75859C28D46D4F00D3C6C6 /* Assets.xcassets */,
+				0E75859E28D46D4F00D3C6C6 /* Info.plist */,
+			);
+			path = OrderCoffee;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,15 +153,34 @@
 				0E75857928D46D2200D3C6C6 /* Sources */,
 				0E75857A28D46D2200D3C6C6 /* Frameworks */,
 				0E75857B28D46D2200D3C6C6 /* Resources */,
+				0E7585A728D46D4F00D3C6C6 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0E7585A228D46D4F00D3C6C6 /* PBXTargetDependency */,
 			);
 			name = LiveActivitiesExample;
 			productName = LiveActivitiesExample;
 			productReference = 0E75857D28D46D2200D3C6C6 /* LiveActivitiesExample.app */;
 			productType = "com.apple.product-type.application";
+		};
+		0E75859128D46D4C00D3C6C6 /* OrderCoffeeExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E7585A428D46D4F00D3C6C6 /* Build configuration list for PBXNativeTarget "OrderCoffeeExtension" */;
+			buildPhases = (
+				0E75858E28D46D4C00D3C6C6 /* Sources */,
+				0E75858F28D46D4C00D3C6C6 /* Frameworks */,
+				0E75859028D46D4C00D3C6C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OrderCoffeeExtension;
+			productName = OrderCoffeeExtension;
+			productReference = 0E75859228D46D4C00D3C6C6 /* OrderCoffeeExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,6 +193,9 @@
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					0E75857C28D46D2200D3C6C6 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					0E75859128D46D4C00D3C6C6 = {
 						CreatedOnToolsVersion = 14.1;
 					};
 				};
@@ -116,6 +214,7 @@
 			projectRoot = "";
 			targets = (
 				0E75857C28D46D2200D3C6C6 /* LiveActivitiesExample */,
+				0E75859128D46D4C00D3C6C6 /* OrderCoffeeExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +229,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0E75859028D46D4C00D3C6C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E75859D28D46D4F00D3C6C6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -138,11 +245,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E75858328D46D2200D3C6C6 /* ContentView.swift in Sources */,
+				0E7585A028D46D4F00D3C6C6 /* OrderCoffee.intentdefinition in Sources */,
 				0E75858128D46D2200D3C6C6 /* LiveActivitiesExampleApp.swift in Sources */,
+				0E7585B528D482A000D3C6C6 /* OrderActivityManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E75858E28D46D4C00D3C6C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E7585B428D4829C00D3C6C6 /* OrderActivityManager.swift in Sources */,
+				0E75859A28D46D4C00D3C6C6 /* OrderCoffee.swift in Sources */,
+				0E75859F28D46D4F00D3C6C6 /* OrderCoffee.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0E7585A228D46D4F00D3C6C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0E75859128D46D4C00D3C6C6 /* OrderCoffeeExtension */;
+			targetProxy = 0E7585A128D46D4F00D3C6C6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0E75858928D46D2300D3C6C6 /* Debug */ = {
@@ -262,6 +389,7 @@
 		0E75858C28D46D2300D3C6C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -269,6 +397,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"LiveActivitiesExample/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LiveActivitiesExample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -290,6 +419,7 @@
 		0E75858D28D46D2300D3C6C6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +427,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"LiveActivitiesExample/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LiveActivitiesExample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -309,6 +440,58 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tigi44.LiveActivitiesExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0E7585A528D46D4F00D3C6C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OrderCoffee/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OrderCoffee;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tigi44.LiveActivitiesExample.OrderCoffee;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0E7585A628D46D4F00D3C6C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OrderCoffee/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OrderCoffee;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tigi44.LiveActivitiesExample.OrderCoffee;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -332,6 +515,15 @@
 			buildConfigurations = (
 				0E75858C28D46D2300D3C6C6 /* Debug */,
 				0E75858D28D46D2300D3C6C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0E7585A428D46D4F00D3C6C6 /* Build configuration list for PBXNativeTarget "OrderCoffeeExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E7585A528D46D4F00D3C6C6 /* Debug */,
+				0E7585A628D46D4F00D3C6C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
