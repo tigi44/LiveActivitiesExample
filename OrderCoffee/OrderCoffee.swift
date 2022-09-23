@@ -27,7 +27,7 @@ struct OrderCoffee: Widget {
                                 .frame(width: 30, height: 30)
                         }
                     }
-                    .foregroundColor(.red)
+                    .foregroundColor(.purple)
                 }
                 DynamicIslandExpandedRegion(.trailing) {
                     Text("#\(context.attributes.orderNumber)")
@@ -49,8 +49,8 @@ struct OrderCoffee: Widget {
                             .fill(
                                 LinearGradient(
                                         gradient: Gradient(stops: [
-                                            Gradient.Stop(color: context.state.status == .received ? .white.opacity(0.6) : .red, location: 0.5),
-                                            Gradient.Stop(color: context.state.status == .ready ? .red : .white.opacity(0.6), location: 0.5)
+                                            Gradient.Stop(color: context.state.status == .received ? .white.opacity(0.6) : .purple, location: 0.5),
+                                            Gradient.Stop(color: context.state.status == .ready ? .purple : .white.opacity(0.6), location: 0.5)
                                         ]),
                                         startPoint: .leading,
                                         endPoint: .trailing)
@@ -62,11 +62,11 @@ struct OrderCoffee: Widget {
                             ForEach(OrderStatus.allCases, id: \.self) { status in
                                 Image(systemName: status.image)
                                     .font(context.state.status == status ? .title2 : .body)
-                                    .foregroundColor(context.state.status == status ? .red : Color.init(red: 0.6, green: 0.6, blue: 0.6))
+                                    .foregroundColor(context.state.status == status ? .purple : Color.init(red: 0.6, green: 0.6, blue: 0.6))
                                     .frame(width: context.state.status == status ? 45 : 32, height: context.state.status == status ? 45 : 32)
                                     .background {
                                         Circle()
-                                            .fill(context.state.status == status ? .white : Color.init(red: 0.4, green: 0, blue: 0))
+                                            .fill(context.state.status == status ? .white : Color.init(red: 0.4, green: 0, blue: 0.4))
                                     }
 
                                     .frame(maxWidth: .infinity)
@@ -83,7 +83,7 @@ struct OrderCoffee: Widget {
                             .frame(width: 30, height: 30)
                     }
                 }
-                .foregroundColor(.red)
+                .foregroundColor(.purple)
             } compactTrailing: {
                 Image(systemName: context.state.status.image)
                     .font(.title3)
@@ -91,6 +91,7 @@ struct OrderCoffee: Widget {
                 Image(systemName: context.state.status.image)
                     .font(.title3)
             }
+            .keylineTint(Color.purple)
         }
     }
 }
@@ -125,14 +126,14 @@ struct LockScreenLiveActivityView: View {
                                     .padding(-2)
                                 
                                 Circle()
-                                    .stroke(.red, lineWidth: 1.5)
+                                    .stroke(.purple, lineWidth: 1.5)
                                     .padding(-2)
                                 
                                 Image(systemName: item)
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: 30, height: 30)
-                                    .foregroundColor(.red)
+                                    .foregroundColor(.purple)
                             }
                             .frame(width: 40, height: 40)
                         }
@@ -144,8 +145,8 @@ struct LockScreenLiveActivityView: View {
                         .fill(
                             LinearGradient(
                                     gradient: Gradient(stops: [
-                                        Gradient.Stop(color: context.state.status == .received ? .white.opacity(0.6) : .red, location: 0.5),
-                                        Gradient.Stop(color: context.state.status == .ready ? .red : .white.opacity(0.6), location: 0.5)
+                                        Gradient.Stop(color: context.state.status == .received ? .white.opacity(0.6) : .purple, location: 0.5),
+                                        Gradient.Stop(color: context.state.status == .ready ? .purple : .white.opacity(0.6), location: 0.5)
                                     ]),
                                     startPoint: .leading,
                                     endPoint: .trailing)
@@ -159,11 +160,11 @@ struct LockScreenLiveActivityView: View {
                         ForEach(OrderStatus.allCases, id: \.self) { status in
                             Image(systemName: status.image)
                                 .font(context.state.status == status ? .title2 : .body)
-                                .foregroundColor(context.state.status == status ? .red : .white.opacity(0.6))
+                                .foregroundColor(context.state.status == status ? .purple : .white.opacity(0.6))
                                 .frame(width: context.state.status == status ? 45 : 32, height: context.state.status == status ? 45 : 32)
                                 .background {
                                     Circle()
-                                        .fill(context.state.status == status ? .white : .red.opacity(0.4))
+                                        .fill(context.state.status == status ? .white : .purple.opacity(0.4))
                                 }
                                 .background(alignment: .bottom, content: {
                                     BottomArrow(status: context.state.status, type: status)
