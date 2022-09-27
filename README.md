@@ -1,5 +1,7 @@
 # LiveActivitiesExample
 
+![Swift](https://github.com/tigi44/LiveActivitiesExample/workflows/Swift/badge.svg)
+
 ![example](./images/examplea.png)
 
 ## Live Activity + Dynamic Island
